@@ -14,7 +14,7 @@ const Navbar = () => {
     <nav className="w-full bg-white">
       <div className="container flex h-16 items-center justify-between">
         {/* Left side: Logo */}
-        <Link to="/" className="text-xl font-bold">
+        <Link to="/" className="text-xl font-bold text-primary">
           MoorLand Fix
         </Link>
 
@@ -23,17 +23,14 @@ const Navbar = () => {
           <NavigationMenu>
             <NavigationMenuList className="flex gap-6">
               <NavigationMenuItem>
-                <Link
-                  to="/"
-                  className="text-sm font-medium hover:text-blue-600"
-                >
+                <Link to="/" className="text-sm font-medium hover:text-primary">
                   Home
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <Link
                   to="/services"
-                  className="text-sm font-medium hover:text-blue-600"
+                  className="text-sm font-medium hover:text-primary"
                 >
                   Services
                 </Link>
@@ -41,7 +38,7 @@ const Navbar = () => {
               <NavigationMenuItem>
                 <Link
                   to="/contact_us"
-                  className="text-sm font-medium hover:text-blue-600"
+                  className="text-sm font-medium hover:text-primary"
                 >
                   Contact us
                 </Link>

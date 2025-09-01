@@ -20,7 +20,7 @@ const HomePage = () => {
         <div className="container mx-auto px-4">
           {/* Heading + description */}
           <div className="max-w-2xl mx-auto text-center mb-12 space-y-4">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-primary">
               Our Services
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -63,7 +63,7 @@ const HomePage = () => {
             <p className="text-sm font-medium text-purple-500 tracking-wide uppercase">
               Our Working Process
             </p>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-primary">
               How do we work?
             </h2>
           </div>
@@ -109,7 +109,7 @@ const HomePage = () => {
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
           {/* Left side: text */}
           <div>
-            <h2 className="text-3xl font-bold tracking-tight mb-4">
+            <h2 className="text-3xl font-bold tracking-tight mb-4 text-primary">
               Get in Touch
             </h2>
             <p className="text-gray-600 mb-6">
@@ -247,7 +247,7 @@ const HomePage = () => {
           <div className="grid items-center gap-8 md:grid-cols-2">
             {/* Left side: text */}
             <div className="space-y-6 text-center md:text-left">
-              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-primary">
                 Reliable Home Services, Right When You Need Them
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg mx-auto md:mx-0">
