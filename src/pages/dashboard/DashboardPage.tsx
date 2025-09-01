@@ -3,8 +3,26 @@ import { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Menu } from "lucide-react";
+import {
+  Menu,
+  LayoutDashboard,
+  CalendarCheck,
+  Settings,
+  type LucideIcon,
+} from "lucide-react";
 import { Link } from "react-router-dom";
+
+interface MenuItems {
+  to: string;
+  label: string;
+  icon: LucideIcon;
+}
+
+const menuItems: MenuItems[] = [
+  { to: "/overview", label: "Overview", icon: LayoutDashboard },
+  { to: "/appointments", label: "Appointments", icon: CalendarCheck },
+  { to: "/settings", label: "Settings", icon: Settings },
+];
 
 const Sidebar = () => {
   return (
@@ -12,28 +30,22 @@ const Sidebar = () => {
       <h2 className="text-xl font-bold text-primary">MoorLand Fix</h2>
       <Separator />
       <nav className="flex flex-col gap-2">
-        <Link to="/overview" className="text-sm font-medium hover:text-primary">
-          Overview
-        </Link>
-        <Link
-          to="/appointments"
-          className="text-sm font-medium hover:text-primary"
-        >
-          Appointments
-        </Link>
-        <Link to="/settings" className="text-sm font-medium hover:text-primary">
-          Settings
-        </Link>
+        {menuItems.map(({ to, label, icon: Icon }) => (
+          <Link
+            key={to}
+            to={to}
+            className="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-white hover:text-primary hover:shadow-sm"
+          >
+            <Icon className="h-5 w-5" />
+            {label}
+          </Link>
+        ))}
       </nav>
     </div>
   );
 };
 
-export default function DashboardLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export function DashboardLayout({ children }: { children: React.ReactNode }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -58,7 +70,7 @@ export default function DashboardLayout({
       </div>
 
       {/* Main content */}
-      <main className="flex-1 overflow-y-auto p-6">{children}</main>
+      <main className="flex-1 overflow-y-auto p-6 bg-gray-50">{children}</main>
     </div>
   );
 }

@@ -26,7 +26,7 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route
           path={`/${NavigationLinks.dashboard}`}
-          element={<DashboardPage />}
+          element={<DashboardPage children={undefined} />}
         />
       </Routes>
     </QueryClientProvider>
