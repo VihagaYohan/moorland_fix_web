@@ -9,6 +9,10 @@ import {
   HomePage,
   AboutPage,
   DashboardPage,
+  DashboardHome,
+  StaffPage,
+  ServicesPage,
+  AppointmnetPage,
 } from "./pages";
 
 // constants
@@ -21,13 +25,23 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
+        <Route path={`/${NavigationLinks.about}`} element={<AboutPage />} />
+        <Route path={`/${NavigationLinks.login}`} element={<LoginPage />} />
+        <Route
+          path={`/${NavigationLinks.reigster}`}
+          element={<RegisterPage />}
+        />
         <Route
           path={`/${NavigationLinks.dashboard}`}
-          element={<DashboardPage children={undefined} />}
-        />
+          element={<DashboardPage />}
+        >
+          <Route path="" element={<DashboardHome />} />
+          <Route
+            path={NavigationLinks.appointments}
+            element={<AppointmnetPage />}
+          />
+          <Route path={NavigationLinks.staff} element={<h1>Settings</h1>} />
+        </Route>
       </Routes>
     </QueryClientProvider>
   );

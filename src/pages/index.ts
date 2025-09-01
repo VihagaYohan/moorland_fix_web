@@ -3,3 +3,7 @@ export { default as RegisterPage } from "./auth/register/RegisterPage";
 export { default as HomePage } from "./home/HomePage";
 export { default as AboutPage } from "./about/about";
 export { default as DashboardPage } from "./dashboard/DashboardPage";
+export { default as DashboardHome } from "./dashboard/DashboardHome";
+export { default as ServicesPage } from "./services/ServicesPage";
+export { default as StaffPage } from "./staff/StaffPage";
+export { default as AppointmnetPage } from "./appointments/AppointmentsPage";
