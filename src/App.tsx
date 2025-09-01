@@ -3,7 +3,16 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Routes, Route } from "react-router-dom";
 
 // pages
-import { LoginPage, RegisterPage, HomePage, AboutPage } from "./pages";
+import {
+  LoginPage,
+  RegisterPage,
+  HomePage,
+  AboutPage,
+  DashboardPage,
+} from "./pages";
+
+// constants
+import { NavigationLinks } from "./utils/constants";
 
 const queryClient = new QueryClient();
 
@@ -15,6 +24,10 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
+        <Route
+          path={`/${NavigationLinks.dashboard}`}
+          element={<DashboardPage />}
+        />
       </Routes>
     </QueryClientProvider>
   );

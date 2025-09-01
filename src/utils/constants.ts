@@ -3,4 +3,5 @@ export const NavigationLinks = {
   reigster: "register",
   home: "home",
   about: "about",
+  dashboard: "dashboard",
 };
